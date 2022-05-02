@@ -1,4 +1,4 @@
-# [title]
+# Association between KOOS scores and OTC analgesic use in patients using knee-braces
 
 Quantify the association between KOOS increase and pain reduction, controlling for frequency of use of over-the-counter analgesic.
 
