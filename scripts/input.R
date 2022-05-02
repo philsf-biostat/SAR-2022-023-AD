@@ -11,9 +11,9 @@ library(labelled)
 
 # data loading ------------------------------------------------------------
 set.seed(42)
-data.raw <- tibble(id=gl(2, 10), group = gl(2, 10), outcome = rnorm(20))
-# data.raw <- read_excel("dataset/file.xlsx") %>%
-#   janitor::clean_names()
+# data.raw <- tibble(id=gl(2, 10), group = gl(2, 10), outcome = rnorm(20))
+data.raw <- read_excel("dataset/Knee Study Data Analysis (simplified table).xlsx") %>%
+  janitor::clean_names()
 
 Nvar_orig <- data.raw %>% ncol
 Nobs_orig <- data.raw %>% nrow
@@ -22,6 +22,7 @@ Nobs_orig <- data.raw %>% nrow
 
 data.raw <- data.raw %>%
   # select() %>%
+  rename(id = participant) %>%
   mutate() %>%
   filter()
 
@@ -30,13 +31,15 @@ data.raw <- data.raw %>%
 data.raw <- data.raw %>%
   mutate(
     id = factor(id), # or as.character
+    pain_reduc = pain_post - pain_pre,
+    outcome = koos_post - koos_pre,
   )
 
 # labels ------------------------------------------------------------------
 
 data.raw <- data.raw %>%
   set_variable_labels(
-    group = "Study group",
+    # group = "Study group",
     outcome = "Study outcome",
   )
 
@@ -46,8 +49,9 @@ analytical <- data.raw %>%
   # select analytic variables
   select(
     id,
-    group,
+    # group,
     outcome,
+    everything()
   )
 
 Nvar_final <- analytical %>% ncol
