@@ -50,8 +50,13 @@ analytical <- data.raw %>%
   select(
     id,
     # group,
+    age,
+    sex,
+    pain_pre,
+    koos_pre,
     outcome,
-    everything()
+    pain_reduc,
+    frequency,
   )
 
 Nvar_final <- analytical %>% ncol
