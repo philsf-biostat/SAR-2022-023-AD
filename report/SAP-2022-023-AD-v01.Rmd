@@ -69,7 +69,7 @@ kable(history)
 
 ## Objectives
 
-Quantify the association between KOOS increase and pain reduction, controlling for frequency of use of over-the-counter analgesic.
+Quantify the association between KOOS increase and pain reduction, controlling for frequency of use of over-the-counter analgesic over a 4-week period.
 
 ## Hypotheses
 
