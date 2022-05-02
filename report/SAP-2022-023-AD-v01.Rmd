@@ -72,7 +72,7 @@ Quantify the association between KOOS increase and pain reduction, controlling f
 
 ## Hypotheses
 
-In (P) patients 18 through 65 years old who suffer from medial osteoarthritis of the knee using an unloading knee brace, (I) the utilization of OTC analgesics (O) influences the KOOS score (T) over a 4-week period."
+In (P) patients 18 through 65 years old who suffer from medial osteoarthritis of the knee using an unloading knee brace, (E) the utilization of OTC analgesics (O) influences the KOOS score (T) over a 4-week period.
 
 ## Study design
 
@@ -117,20 +117,28 @@ All variables in the analytical set were labeled according to the raw data provi
 
 ## Inclusion and exclusion criteria
 
+N/A
+
 ## Exposures
+
+Frequency of use of OTC analgesics.
 
 ## Outcomes
 
 **Specification of outcome measures** (Zarin, 2011):
 
-1. (Domain)
-2. (Specific measurement)
-3. (Specific metric)
-4. (Method of aggregation)
+1. (Domain) Pain
+2. (Specific measurement) KOOS score
+3. (Specific metric) Mhange from baseline
+4. (Method of aggregation) Mean
 
 **Primary outcome**
 
+Average increase in KOOS score after a 4-week period using OTC analgesics.
+
 ## Covariates
+
+VAS pain scale reduction.
 
 # Statistical methods
 
