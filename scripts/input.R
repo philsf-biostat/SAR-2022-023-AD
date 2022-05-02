@@ -40,7 +40,7 @@ data.raw <- data.raw %>%
 data.raw <- data.raw %>%
   set_variable_labels(
     # group = "Study group",
-    outcome = "Study outcome",
+    outcome = "Change in KOOS score",
   )
 
 # analytical dataset ------------------------------------------------------

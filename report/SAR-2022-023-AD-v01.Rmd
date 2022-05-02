@@ -98,14 +98,14 @@ tab_desc %>%
 # knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
 
-## Inferential analysis
-
 ```{r tab_inf}
-tab_inf %>%
+tab_outcome %>%
   as_kable(
     caption = "**Table 2** caption"
   )
 ```
+
+## Inferential analysis
 
 # Observations and Limitations
 
