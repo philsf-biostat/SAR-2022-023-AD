@@ -54,16 +54,11 @@ kable(history)
 
 # Abbreviations
 
-- BMI: body mass index
 - CI: confidence interval
-- CV: coefficient of variation
-- d: Cohen's D effect size
-- HR: hazards ratio
-- IQR: interquartile range
-- IRR: incidence rate ratio
-- OR: odds ratio
-- RR: risks ratio
+- KOOS: Knee injury and Osteoarthritis Outcome Score
+- OTC: Over the counter
 - SD: standard deviation
+- VAS: Visual analog scale
 
 # Context
 
@@ -73,7 +68,11 @@ Quantify the association between KOOS increase and pain reduction, controlling f
 
 ## Hypotheses
 
+In (P) patients 18 through 65 years old who suffer from medial osteoarthritis of the knee using an unloading knee brace, (I) the utilization of OTC analgesics (O) influences the KOOS score (T) over a 4-week period."
+
 ## Study design
+
+Cross-sectional, change from baseline study.
 
 # Data
 
