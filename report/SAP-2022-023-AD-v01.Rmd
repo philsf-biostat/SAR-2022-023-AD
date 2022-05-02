@@ -200,6 +200,11 @@ This analysis will be performed using statistical software `R` version `r getRve
 
 # Observations and limitations
 
+**Risk of bias**
+
+Besides bio-mechanical and quality of life measurements the KOOS score also includes qualitative measures of pain.
+It could be possible that the VAS pain score is correlated with the KOOS score, which would introduce bias in the association being assessed.
+
 # References
 
 - **SAR-2022-023-AD-v01** -- Association between KOOS scores and OTC analgesic use in patients using knee-braces
