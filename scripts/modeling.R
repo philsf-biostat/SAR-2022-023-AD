@@ -8,11 +8,11 @@ library(broom)
 
 # raw estimate ------------------------------------------------------------
 
-m0 <- lm(outcome ~ pain_reduc, analytical)
+m0 <- lm(outcome ~ frequency, analytical)
 
 # adjusted ----------------------------------------------------------------
 
-m1 <- lm(outcome ~ pain_reduc + frequency, analytical)
+m1 <- lm(outcome ~ frequency + pain_reduc, analytical)
 m1 %>% tidy
 m1 %>% glance
 m1 %>% augment
