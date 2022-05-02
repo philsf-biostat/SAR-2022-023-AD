@@ -1,6 +1,6 @@
 # [title]
 
-Objective
+Quantify the association between KOOS increase and pain reduction, controlling for frequency of use of over-the-counter analgesic.
 
 Statistical Analysis for amandadavis139 (fiverr.com, 2022)
 <!-- Technical Report for  PERSON (PLACE, yyyy) -->
@@ -9,8 +9,6 @@ Statistical Analysis for amandadavis139 (fiverr.com, 2022)
 
 1. Descriptive analysis
 1. Inferential analysis
-1. Power analysis
-1. Missing data imputation
 1. Statistical models
 
 ## Documents
