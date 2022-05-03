@@ -33,14 +33,20 @@ data.raw <- data.raw %>%
     id = factor(id), # or as.character
     pain_reduc = pain_post - pain_pre,
     outcome = koos_post - koos_pre,
+    frequency = factor(frequency),
   )
 
 # labels ------------------------------------------------------------------
 
 data.raw <- data.raw %>%
   set_variable_labels(
-    # group = "Study group",
-    outcome = "Study outcome",
+    outcome = "Change in KOOS score",
+    age = "Age (years)",
+    sex = "Sex",
+    frequency = "Frequency of use (weekly)",
+    pain_reduc = "Change in VAS score",
+    pain_pre = "VAS score",
+    koos_pre = "KOOS score",
   )
 
 # analytical dataset ------------------------------------------------------
@@ -50,8 +56,13 @@ analytical <- data.raw %>%
   select(
     id,
     # group,
+    age,
+    sex,
+    pain_pre,
+    koos_pre,
     outcome,
-    everything()
+    pain_reduc,
+    frequency,
   )
 
 Nvar_final <- analytical %>% ncol

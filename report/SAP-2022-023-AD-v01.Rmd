@@ -2,7 +2,7 @@
 title: "Analytical Plan for Association between KOOS scores and OTC analgesic use in patients using knee-braces"
 subtitle: 'DOCUMENT: SAP-2022-023-AD-v01'
 author: '**From:** Felipe Figueiredo **To:** amandadavis139 (fiverr.com)'
-date: "`r Sys.Date()`"
+date: "2022-05-02"
 output:
   html_document:
     fig_caption: yes
@@ -33,6 +33,10 @@ panderOptions('table.style', 'rmarkdown')
 panderOptions('table.split.table', 160)
 ```
 
+```{r cleaning, include=FALSE}
+source("scripts/input.R", encoding = 'UTF-8')
+```
+
 ---
 
 \newpage
@@ -54,35 +58,31 @@ kable(history)
 
 # Abbreviations
 
-- BMI: body mass index
 - CI: confidence interval
-- CV: coefficient of variation
-- d: Cohen's D effect size
-- HR: hazards ratio
-- IQR: interquartile range
-- IRR: incidence rate ratio
-- OR: odds ratio
-- RR: risks ratio
+- KOOS: Knee injury and Osteoarthritis Outcome Score
+- OTC: Over the counter
 - SD: standard deviation
+- VAS: Visual analog scale
 
 # Context
 
 ## Objectives
 
-Quantify the association between KOOS increase and pain reduction, controlling for frequency of use of over-the-counter analgesic over a 4-week period.
+Quantify the association between KOOS increase and frequency of use of over-the-counter analgesic over a 4-week period, controlling for pain reduction.
 
 ## Hypotheses
 
+In (P) patients 18 through 65 years old who suffer from medial osteoarthritis of the knee using an unloading knee brace, (E) the utilization of OTC analgesics (O) influences the KOOS score (T) over a 4-week period.
+
 ## Study design
+
+Cross-sectional, change from baseline study.
 
 # Data
 
-```{r cleaning, include=FALSE}
-source("scripts/input.R", encoding = 'UTF-8')
-```
-
 ## Raw data
 
+The raw data base was received with KOOS and VAS pain measurements both at baseline and after the 4-week period of the study, as well as the weekly frequency of OTC analgesic use.
 The original data base had
 `r Nvar_orig`
 variables collected on
@@ -91,7 +91,8 @@ observations.
 
 ## Analytical dataset
 
-All variables in the analytical set were labeled according to the raw data provided and values were labeled according to the data dictionary for the preparation of production-quality results tables and figures.
+From the pre and post measurements available in the raw data the differences between baseline and post KOOS scores were calculated, as well as the differences between baseline and post VAS pain scores.
+Baseline characteristics were kept for the descriptive analysis of the study sample.
 
 <!-- After the cleaning process -->
 <!-- `r Nvar_final` -->
@@ -110,24 +111,34 @@ analytical_mockup %>%
   pander(caption = "**Table 1** Analytical dataset structure after variable selection and cleaning.")
 ```
 
+All variables in the analytical set were labeled according to the raw data provided and values were labeled according to the data dictionary for the preparation of production-quality results tables and figures.
+
 # Study parameters
 
 ## Inclusion and exclusion criteria
 
+N/A
+
 ## Exposures
+
+Frequency of use of OTC analgesics.
 
 ## Outcomes
 
 **Specification of outcome measures** (Zarin, 2011):
 
-1. (Domain)
-2. (Specific measurement)
-3. (Specific metric)
-4. (Method of aggregation)
+1. (Domain) Pain
+2. (Specific measurement) KOOS score
+3. (Specific metric) Mhange from baseline
+4. (Method of aggregation) Mean
 
 **Primary outcome**
 
+Average increase in KOOS score after a 4-week period using OTC analgesics.
+
 ## Covariates
+
+VAS pain scale reduction.
 
 # Statistical methods
 
@@ -135,11 +146,11 @@ analytical_mockup %>%
 
 ### Descriptive analyses
 
-The epidemiological profile of the study participants will be described.
+The epidemiological profile of the study participants will be described at baseline.
 Demographic
 (sex, age and BMI)
 and clinical variables
-<!-- ( [vars] ) -->
+( KOOS and VAS scores )
 will be described as
 mean (SD)
 <!-- median (IQR) -->
@@ -148,19 +159,29 @@ The distributions of participants' characteristics will be summarized in tables 
 
 ### Inferential analyses
 
-All comparisons between groups will be performed as univariate analyses.
-Continuous variables will be compared between groups with the
-independent t test with Welch correction.
+<!-- All comparisons between groups will be performed as univariate analyses. -->
+<!-- Continuous variables will be compared between groups with the -->
+<!-- independent t test with Welch correction. -->
 <!-- paired t test. -->
 <!-- Wilcoxon test. -->
-Differences in distribution of categorical variables will be assessed with the
-Fisher exact test.
+<!-- Differences in distribution of categorical variables will be assessed with the -->
+<!-- Fisher exact test. -->
 <!-- chi-square test. -->
 <!-- McNemar test. -->
 
-<!-- All inferential analyses will be performed in the statistical models (described in the next section). -->
+All inferential analyses will be performed in the statistical models (described in the next section).
 
 ### Statistical modeling
+
+A multiple linear regression model will be adjusted to the study data to assess the association between the change in KOOS scores and the frequency of use of OTC analgesics, controlling for the change in VAS pain scores.
+Due to the small sample size available, the results interpretation will focus on the model's coefficients as a descriptive analysis.
+Despite this focus on description of possible trends, CI and p-values will be computed and reported for completeness sake.
+
+In order to evaluate the impact of potentially relevant covariates, several models are planned to be specified in increasing complexity.
+A simple linear regression model will be used to assess the crude estimate of the association between the change in KOOS score and the use of OTC analgesics.
+Other separate models will add the change in VAS pain score
+and the demographic covariates (sex and age) as control variables.
+The final model will include both the change in VAS score and the demographic variables as control variables.
 
 ### Missing data
 
@@ -185,10 +206,21 @@ This analysis will be performed using statistical software `R` version `r getRve
 
 # Observations and limitations
 
+**Risk of bias**
+
+Besides bio-mechanical and quality of life measurements the KOOS score also includes qualitative measures of pain.
+It could be possible that the VAS pain score is correlated with the KOOS score, which would introduce bias in the association being assessed.
+
+**Recommended reporting guideline**
+
+The adoption of the EQUATOR network (<http://www.equator-network.org/>) reporting guidelines have seen increasing adoption by scientific journals.
+All observational studies are recommended to be reported following the STROBE guideline (von Elm et al, 2014).
+
 # References
 
 - **SAR-2022-023-AD-v01** -- Association between KOOS scores and OTC analgesic use in patients using knee-braces
 <!-- - Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge. -->
+- von Elm E, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP; STROBE Initiative. The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) Statement: guidelines for reporting observational studies. Int J Surg. 2014 Dec;12(12):1495-9 (<https://doi.org/10.1016/j.ijsu.2014.07.013>).
 - Zarin DA, et al. The ClinicalTrials.gov results database -- update and key issues. N Engl J Med 2011;364:852-60 (<https://doi.org/10.1056/NEJMsa1012065>).
 - Gamble C, et al. Guidelines for the Content of Statistical Analysis Plans in Clinical Trials. JAMA. 2017;318(23):2337–2343 (<https://doi.org/10.1001/jama.2017.18556>).
 
