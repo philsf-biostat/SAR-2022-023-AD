@@ -22,11 +22,16 @@ m2 <- lm(outcome ~ frequency + sex + age, analytical)
 
 m3 <- lm(outcome ~ frequency + pain_reduc + age + sex, analytical)
 
+m1_lab <- "Crude estimate"
+m2_lab <- "Controlled for VAS reduction"
+m3_lab <- "Controlled for sex and age"
+m4_lab <- "Controlled for VAS reduction, sex and age"
+
 tab_inf <- tbl_stack(list(
-  tbl_regression(m0, include = frequency, show_single_row = frequency, label = list(frequency = "Crude estimate")),
-  tbl_regression(m1, include = frequency, show_single_row = frequency, label = list(frequency = "Controlled for VAS reduction")),
-  tbl_regression(m2, include = frequency, show_single_row = frequency, label = list(frequency = "Controlled for sex and age")),
-  tbl_regression(m3, include = frequency, show_single_row = frequency, label = list(frequency = "Controlled for VAS reduction, sex and age"))
+  tbl_regression(m0, include = frequency, show_single_row = frequency, label = list(frequency = m1_lab)),
+  tbl_regression(m1, include = frequency, show_single_row = frequency, label = list(frequency = m2_lab)),
+  tbl_regression(m2, include = frequency, show_single_row = frequency, label = list(frequency = m3_lab)),
+  tbl_regression(m3, include = frequency, show_single_row = frequency, label = list(frequency = m4_lab))
   ),
   )
 
@@ -35,11 +40,10 @@ tab_app <- tbl_merge(list(
   tbl_regression(m1),
   tbl_regression(m2),
   tbl_regression(m3)
-),
-c(
-  "Crude estimate",
-  "Controlled for VAS reduction",
-  "Controlled for sex and age",
-  "Controlled for VAS reduction, sex and age"
   ),
-)
+  c(
+    m1_lab,
+    m2_lab,
+    m3_lab,
+    m4_lab
+  ))
