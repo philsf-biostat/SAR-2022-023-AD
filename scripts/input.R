@@ -33,6 +33,7 @@ data.raw <- data.raw %>%
     id = factor(id), # or as.character
     pain_reduc = pain_post - pain_pre,
     outcome = koos_post - koos_pre,
+    frequency = factor(frequency),
   )
 
 # labels ------------------------------------------------------------------
