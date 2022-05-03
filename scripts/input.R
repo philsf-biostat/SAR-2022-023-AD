@@ -40,8 +40,13 @@ data.raw <- data.raw %>%
 
 data.raw <- data.raw %>%
   set_variable_labels(
-    # group = "Study group",
     outcome = "Change in KOOS score",
+    age = "Age (years)",
+    sex = "Sex",
+    frequency = "Frequency of use (weekly)",
+    pain_reduc = "Change in VAS score",
+    pain_pre = "VAS score",
+    koos_pre = "KOOS score",
   )
 
 # analytical dataset ------------------------------------------------------
