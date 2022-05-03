@@ -1,5 +1,5 @@
 ---
-title: "[title]"
+title: "Association between KOOS scores and OTC analgesic use in patients using knee-braces"
 subtitle: 'DOCUMENT: SAR-2022-023-AD-v01'
 author: '**From:** Felipe Figueiredo **To:** amandadavis139 (fiverr.com)'
 date: "2022-05-03"
@@ -37,7 +37,7 @@ panderOptions('table.split.table', 160)
 
 \newpage
 
-**[title]**
+**Association between KOOS scores and OTC analgesic use in patients using knee-braces**
 
 **Document version**
 
@@ -120,7 +120,7 @@ tab_inf %>%
 
 # References
 
-- **SAP-2022-023-AD-v01** -- Analytical Plan for [title]
+- **SAP-2022-023-AD-v01** -- Analytical Plan for Association between KOOS scores and OTC analgesic use in patients using knee-braces
 
 # Appendix
 
