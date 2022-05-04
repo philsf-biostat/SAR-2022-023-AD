@@ -17,7 +17,7 @@ gg.outcome <- gg +
   geom_histogram(aes(outcome, ..density..), binwidth = .1, fill = ff.col, col = "gray20") +
   geom_density(aes(outcome), lwd = 1) +
   xlab(attr(analytical$outcome, "label")) +
-  ylab("")
+  ylab("N")
 
 # gg.age <- gg +
 #   geom_histogram(aes(age),
@@ -28,11 +28,14 @@ gg.age <- gg +
   geom_density(aes(age, fill = sex),
                  # fill = ff.col,
                  alpha = .9,) +
-  # xlab(attr(analytical$age, "label")) +
-  ylab("")
+  labs(fill = "Sex") +
+  xlab(attr(analytical$age, "label")) +
+  ylab("N")
 
 gg.sex <- gg +
-  geom_bar(aes(sex), fill = ff.col, col = "gray20")
+  geom_bar(aes(sex), fill = ff.col, col = "gray20") +
+  xlab(attr(analytical$sex, "label")) +
+  ylab("N")
 
 # cool facet trick from https://stackoverflow.com/questions/3695497 by JWilliman
 # gg +
