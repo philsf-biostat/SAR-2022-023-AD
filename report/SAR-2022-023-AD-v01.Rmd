@@ -136,9 +136,16 @@ tab_inf %>%
 The full model controls for both pain reduction and demographic characteristics, thus giving a more detailed picture of the association.
 This estimate can be interpreted as participants taking OTC analgesics appearing to have a slightly lower KOOS score after 4 weeks when compared to those who did not take analgesics.
 
+Full details of the models can be seen in Table A1 (Appendix).
+
+Overall, although all participants showed an increase in KOOS scores after four weeks, there does not seem to have evidence of an association of analgesics and a faster improvement.
+
 # Observations and Limitations
 
 # Conclusions
+
+All participants showed an increase in KOOS scores after four weeks.
+Despite this overall improvement, there does not seem to have evidence that the use of OTC analgesics is associated with a faster improvement.
 
 # References
 
