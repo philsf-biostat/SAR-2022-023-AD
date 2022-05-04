@@ -134,7 +134,7 @@ tab_inf %>%
 ```
 
 The full model controls for both pain reduction and demographic characteristics, thus giving a more detailed picture of the association.
-This estimate means that participants taking OTC analgesics appear to have a slightly lower KOOS score after 4 weeks when compared to those who did not take analgesics.
+This estimate can be interpreted as participants taking OTC analgesics appearing to have a slightly lower KOOS score after 4 weeks when compared to those who did not take analgesics.
 
 # Observations and Limitations
 
