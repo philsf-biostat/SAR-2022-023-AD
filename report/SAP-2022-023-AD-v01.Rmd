@@ -138,7 +138,7 @@ Average increase in KOOS score after a 4-week period using OTC analgesics.
 
 ## Covariates
 
-VAS pain scale reduction.
+VAS pain scale reduction, age and sex.
 
 # Statistical methods
 
