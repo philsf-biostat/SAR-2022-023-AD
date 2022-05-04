@@ -122,7 +122,7 @@ knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```{r tab_inf}
 tab_inf %>%
   as_kable(
-    caption = "**Table 3** caption"
+    caption = "**Table 3** Linear regressions of change in KOOS score associated with use of over the counter analgesics after 4 weeks of observation using a knee brace."
   )
 ```
 
