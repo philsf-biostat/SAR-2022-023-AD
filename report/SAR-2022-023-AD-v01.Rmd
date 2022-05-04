@@ -2,7 +2,7 @@
 title: "Association between KOOS scores and OTC analgesic use in patients using knee-braces"
 subtitle: 'DOCUMENT: SAR-2022-023-AD-v01'
 author: '**From:** Felipe Figueiredo **To:** amandadavis139 (fiverr.com)'
-date: "2022-05-03"
+date: "2022-05-04"
 output:
   html_document:
     fig_caption: yes
