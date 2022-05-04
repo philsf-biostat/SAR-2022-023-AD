@@ -122,6 +122,7 @@ knitr::include_graphics("../figures/outcome.png", error = FALSE)
 We adjusted four linear models to assess the association of analgesic use on the change in KOOS score (Table 3).
 The crude estimate given by a simple linear regression (thus not controlling for other variables) indicates that participants using analgesics on weekly basis had a KOOS score 0.08 lower than participants that did not use analgesics.
 When controlling for pain reduction as measured by the VAS score this discrepancy increases to a 0.1 decrease, on average.
+When the association between KOOS and use of analgesics is controlled for the demographic characteristics the difference in KOOS scores is no longer detectable between different analgesic regimens.
 
 ```{r tab_inf}
 tab_inf %>%
@@ -129,6 +130,9 @@ tab_inf %>%
     caption = "**Table 3** Linear regressions of change in KOOS score associated with use of over the counter analgesics after 4 weeks of observation using a knee brace."
   )
 ```
+
+The full model controls for both pain reduction and demographic characteristics, thus giving a more detailed picture of the association.
+This estimate means that participants taking OTC analgesics appear to have a slightly lower KOOS score after 4 weeks when compared to those who did not take analgesics.
 
 # Observations and Limitations
 
