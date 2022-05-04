@@ -117,7 +117,7 @@ The distribution of the change in KOOS score is markedly bi-modal (Figure 1), wh
 knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
 
-## Inferential analysis
+## Association between change in KOOS score and use of analgesic
 
 We adjusted four linear models to assess the association of analgesic use on the change in KOOS score (Table 3).
 Due to the small sample size, none of the models estimated presented significant associations so here we report the trends as a descriptive analysis of the point estimates.
