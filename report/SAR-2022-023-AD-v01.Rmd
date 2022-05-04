@@ -117,18 +117,35 @@ The distribution of the change in KOOS score is markedly bi-modal (Figure 1), wh
 knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
 
-## Inferential analysis
+## Association between change in KOOS score and use of analgesic
+
+We adjusted four linear models to assess the association of analgesic use on the change in KOOS score (Table 3).
+Due to the small sample size, none of the models estimated presented significant associations so here we report the trends as a descriptive analysis of the point estimates.
+
+The crude estimate given by a simple linear regression (thus not controlling for other variables) indicates that participants using analgesics on weekly basis had a KOOS score 0.08 lower than participants that did not use analgesics.
+When controlling for pain reduction as measured by the VAS score this discrepancy increases to a 0.1 decrease, on average.
+When the association between KOOS and use of analgesics is controlled for the demographic characteristics the difference in KOOS scores is no longer detectable between different analgesic regimens.
 
 ```{r tab_inf}
 tab_inf %>%
   as_kable(
-    caption = "**Table 3** caption"
+    caption = "**Table 3** Linear regressions of change in KOOS score associated with use of over the counter analgesics after 4 weeks of observation using a knee brace."
   )
 ```
+
+The full model controls for both pain reduction and demographic characteristics, thus giving a more detailed picture of the association.
+This estimate can be interpreted as participants taking OTC analgesics appearing to have a slightly lower KOOS score after 4 weeks when compared to those who did not take analgesics.
+
+Full details of the models can be seen in Table A1 (Appendix).
+
+Overall, although all participants showed an increase in KOOS scores after four weeks, there does not seem to have evidence of an association of analgesics and a faster improvement.
 
 # Observations and Limitations
 
 # Conclusions
+
+All participants showed an increase in KOOS scores after four weeks.
+Despite this overall improvement, there does not seem to have evidence that the use of OTC analgesics is associated with a faster improvement.
 
 # References
 
@@ -150,10 +167,13 @@ knitr::include_graphics("../figures/sex.png", error = FALSE)
 
 ## Modeling strategy
 
+Demographic characteristics appear to have an impact on the association between KOOS change and use of analgesics.
+This could indicate that the crude estimate is biased away from the null hypothesis, so controlling for these variables is strongly recommended in future studies with larger sample sizes.
+
 ```{r tab_app}
 tab_app %>%
   as_kable(
-    caption = "**Table A1** caption"
+    caption = "**Table A1** Change in KOOS score after 4 weeks of observation."
   )
 ```
 
