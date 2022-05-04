@@ -86,23 +86,35 @@ This analysis was performed using statistical software `R` version `r getRversio
 
 ## Study population and follow up
 
+Ten participants were followed over the course of a 4-week period in total.
+Study sample were on average 49 years old at the start of the study, where 70% were women (Table 1).
+Average KOOS score at baseline was 0.48 and average VAS score was 7.7.
+
+Exploratory plots of age and sex distributions in the study population can be seen in Figures A1 and A2 (Appendix).
+
 ```{r tab_desc}
 tab_desc %>%
   as_kable(
-    caption = "**Table 1** caption"
+    caption = "**Table 1** Demographic and clinical characteristics at baseline."
   )
 ```
 
-```{r fig1, fig.cap="**Figure 1** caption"}
-# ![Age](../figures/outcome.png)
-knitr::include_graphics("../figures/outcome.png", error = FALSE)
-```
+In all participants the KOOS score increased during the observation period (Table 2, Figure 1).
+Participants showed an average 0.25 increase in KOOS score, with an average 6-point decrease in VAS score.
+Over the course of four weeks of observation half of the participants made use of OTC analgesics on a weekly basis.
 
 ```{r tab_outcome}
 tab_outcome %>%
   as_kable(
-    caption = "**Table 2** caption"
+    caption = "**Table 2** Clinical characteristics after 4-weeks of observation."
   )
+```
+
+The distribution of the change in KOOS score is markedly bi-modal (Figure 1), where a single participant showed an atypical increase during the same period -- a 26-years old woman exited the study with a 0.58 increase in her KOOS score, having a 6-point decrease in VAS score while taking no weekly OTC analgesics.
+
+```{r fig1, fig.cap="**Figure 1** Change in KOOS score after 4 weeks of observation."}
+# ![Age](../figures/outcome.png)
+knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
 
 ## Inferential analysis
@@ -135,6 +147,7 @@ knitr::include_graphics("../figures/age.png", error = FALSE)
 # ![Age](../figures/distr_age.png)
 knitr::include_graphics("../figures/sex.png", error = FALSE)
 ```
+
 ## Modeling strategy
 
 ```{r tab_app}
