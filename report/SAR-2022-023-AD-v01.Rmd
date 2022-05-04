@@ -167,10 +167,13 @@ knitr::include_graphics("../figures/sex.png", error = FALSE)
 
 ## Modeling strategy
 
+Demographic characteristics appear to have an impact on the association between KOOS change and use of analgesics.
+This could indicate that the crude estimate is biased away from the null hypothesis, so controlling for these variables is strongly recommended in future studies with larger sample sizes.
+
 ```{r tab_app}
 tab_app %>%
   as_kable(
-    caption = "**Table A1** caption"
+    caption = "**Table A1** Change in KOOS score after 4 weeks of observation."
   )
 ```
 
