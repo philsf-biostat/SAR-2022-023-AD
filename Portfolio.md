@@ -1,49 +1,26 @@
 ---
-title: '[title]'
-date: ""
+title: 'Association between KOOS scores and OTC analgesic use in patients using knee-braces'
+date: "2022-05-04"
 permalink: /portfolio/SAR-2022-023/
 redirect_from:
   - /portfolio/SAR-2022-023-AD/
   - /SAR-2022-023-AD/
 categories:
-  - case-control
   - cross-sectional
-  - longitudinal-studies
-  - cohort
-  - clinical-trial
-  - ecological
-  - epidemiology
-  - bioassay
-  - systematic-review
-  - technical-report
-  - data-product
 tags:
   - prevalence
-  - incidence
   - diagnostic-models
-  - prognostic-models
-  - survival-analysis
-  - efficacy
-  - concordance-analysis
-  - survey
-  - meta-analysis
-  - decision-trees
-  - machine-learning
-  - unsupervised-learning
-  - data-instrument
 ---
 
-Objective
+Quantify the association between KOOS increase and frequency of use of over-the-counter analgesic over a 4-week period, controlling for pain reduction.
 
-Statistical Analysis for PERSON (PLACE, yyyy)
+Statistical Analysis for amandadavis139 (fiverr.com, 2022)
 <!-- Technical Report for  PERSON (PLACE, yyyy) -->
 
 ## Analyses performed
 
 1. Descriptive analysis
 1. Inferential analysis
-1. Power analysis
-1. Missing data imputation
 1. Statistical models
 
 ## Documents
